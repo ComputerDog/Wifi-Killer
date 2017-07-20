@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Wifi-Killer [Version 1.0]"
-echo "Written by Marin4o"
+echo "Written by bm2k4"
 echo
 read -p "Enter interface to use(monitor mode): " iface
 read -p "Enter access point MAC: " apaddr
